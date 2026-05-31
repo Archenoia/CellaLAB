@@ -25,10 +25,9 @@ class App {
      * List all community records with optional pagination and filtering
      * @access * @uses api @method GET
      */
-    public function list() {
+    public function list($page = 1, $pageSize = 20) {
         $table = new Table("community");
-        $page = isset($_GET["page"]) ? intval($_GET["page"]) : 1;
-        $pageSize = isset($_GET["page_size"]) ? intval($_GET["page_size"]) : 20;
+
         if (isset($_GET["name"]) && !empty($_GET["name"])) {
             $table = $table->where(["name" => like("%" . $_GET["name"] . "%")]);
         }
@@ -77,15 +76,18 @@ class App {
 
     /**
      * Create a new community record
-     * @access * @uses api @method POST @require project_id=i32|name=string
+     * @access * 
+     * @uses api 
+     * @method POST 
+     * @require project_id=i32|name=string
      */
-    public function create($project_id, $name) {
+    public function create($project_id, $name, $note = null) {
         $table = new Table("community");
         // Verify project exists
         $project = (new Table("project_data"))->where(["id" => $project_id])->find();
         if (!$project) { controller::error("Project with id $project_id not found", 404); }
         $data = ["project_id" => $project_id, "name" => $name];
-        if (isset($_POST["note"]) && !empty($_POST["note"])) { $data["note"] = $_POST["note"]; }
+        $data["note"] = $note;
         $result = $table->add($data);
         if ($result) { controller::success(["id" => $result, "message" => "Community created successfully"]); }
         else { controller::error("Failed to create community", 500); }
@@ -93,7 +95,9 @@ class App {
 
     /**
      * Update an existing community record
-     * @access * @uses api @method POST @require id=i32
+     * @access * 
+     * @uses api 
+     * @method POST @require id=i32
      */
     public function update($id) {
         $table = new Table("community");
