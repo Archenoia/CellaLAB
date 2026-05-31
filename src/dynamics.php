@@ -24,7 +24,9 @@ class App {
 
     /**
      * List all dynamics records with optional pagination and filtering
-     * @access * @uses api @method GET
+     * @access * 
+     * @uses api 
+     * @method GET
      */
     public function list($page=1, $pageSize = 20) {
         $table = new Table("dynamics");
@@ -46,7 +48,10 @@ class App {
 
     /**
      * Get a single dynamics record by ID
-     * @access * @uses api @method GET @require id=i32
+     * @access * 
+     * @uses api 
+     * @method GET 
+     * @require id=i32
      */
     public function get($id) {
         $table = new Table("dynamics");
@@ -57,7 +62,10 @@ class App {
 
     /**
      * List dynamics by experiment_id
-     * @access * @uses api @method GET @require experiment_id=i32
+     * @access * 
+     * @uses api 
+     * @method GET 
+     * @require experiment_id=i32
      */
     public function list_by_experiment($experiment_id) {
         $table = new Table("dynamics");
@@ -67,7 +75,10 @@ class App {
 
     /**
      * List dynamics by cella_id (model_variant FK)
-     * @access * @uses api @method GET @require cella_id=i32
+     * @access * 
+     * @uses api 
+     * @method GET 
+     * @require cella_id=i32
      */
     public function list_by_cella($cella_id) {
         $table = new Table("dynamics");
@@ -77,7 +88,10 @@ class App {
 
     /**
      * Create a new dynamics record
-     * @access * @uses api @method POST @require experiment_id=i32|cella_id=i32|molecule_id=string|x0=double|dynamics=string
+     * @access * 
+     * @uses api 
+     * @method POST 
+     * @require experiment_id=i32|cella_id=i32|molecule_id=string|x0=double|dynamics=string
      */
     public function create($experiment_id, $cella_id, $molecule_id, $x0, $dynamics) {
         $table = new Table("dynamics");
@@ -104,7 +118,10 @@ class App {
 
     /**
      * Update an existing dynamics record
-     * @access * @uses api @method POST @require id=i32
+     * @access * 
+     * @uses api 
+     * @method POST 
+     * @require id=i32
      */
     public function update($id) {
         $table = new Table("dynamics");
@@ -135,7 +152,10 @@ class App {
 
     /**
      * Delete a dynamics record by ID
-     * @access * @uses api @method POST @require id=i32
+     * @access * 
+     * @uses api 
+     * @method POST 
+     * @require id=i32
      */
     public function delete($id) {
         $table = new Table("dynamics");

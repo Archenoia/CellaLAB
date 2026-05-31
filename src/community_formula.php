@@ -24,7 +24,9 @@ class App {
 
     /**
      * List all community_formula records with optional pagination and filtering
-     * @access * @uses api @method GET
+     * @access * 
+     * @uses api 
+     * @method GET
      */
     public function list($page=1, $pageSize = 20) {
         $table = new Table("community_formula");
@@ -43,7 +45,10 @@ class App {
 
     /**
      * Get a single community_formula record by ID
-     * @access * @uses api @method GET @require id=i32
+     * @access * 
+     * @uses api 
+     * @method GET 
+     * @require id=i32
      */
     public function get($id) {
         $table = new Table("community_formula");
@@ -54,7 +59,10 @@ class App {
 
     /**
      * List formulas by community_id
-     * @access * @uses api @method GET @require community_id=i32
+     * @access * 
+     * @uses api 
+     * @method GET 
+     * @require community_id=i32
      */
     public function list_by_community($community_id) {
         $table = new Table("community_formula");
@@ -64,7 +72,10 @@ class App {
 
     /**
      * List formulas by model_id
-     * @access * @uses api @method GET @require model_id=i32
+     * @access *
+     * @uses api 
+     * @method GET 
+     * @require model_id=i32
      */
     public function list_by_model($model_id) {
         $table = new Table("community_formula");
@@ -74,7 +85,10 @@ class App {
 
     /**
      * Create a new community_formula record
-     * @access * @uses api @method POST @require community_id=i32|model_id=i32|composition=double
+     * @access * 
+     * @uses api 
+     * @method POST 
+     * @require community_id=i32|model_id=i32|composition=double
      */
     public function create($community_id, $model_id, $composition) {
         $table = new Table("community_formula");
@@ -98,7 +112,10 @@ class App {
 
     /**
      * Update an existing community_formula record
-     * @access * @uses api @method POST @require id=i32
+     * @access * 
+     * @uses api 
+     * @method POST 
+     * @require id=i32
      */
     public function update($id) {
         $table = new Table("community_formula");
@@ -129,7 +146,10 @@ class App {
 
     /**
      * Delete a community_formula record by ID
-     * @access * @uses api @method POST @require id=i32
+     * @access * 
+     * @uses api 
+     * @method POST 
+     * @require id=i32
      */
     public function delete($id) {
         $table = new Table("community_formula");

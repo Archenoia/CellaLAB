@@ -22,7 +22,9 @@ class App {
 
     /**
      * List all culture_medium records with optional pagination and filtering
-     * @access * @uses api @method GET
+     * @access * 
+     * @uses api 
+     * @method GET
      */
     public function list($page =1, $pageSize = 20) {
         $table = new Table("culture_medium");
@@ -38,7 +40,10 @@ class App {
 
     /**
      * Get a single culture_medium record by ID
-     * @access * @uses api @method GET @require id=i32
+     * @access * 
+     * @uses api 
+     * @method GET 
+     * @require id=i32
      */
     public function get($id) {
         $table = new Table("culture_medium");
@@ -49,7 +54,10 @@ class App {
 
     /**
      * Get culture medium with its substrate compositions
-     * @access * @uses api @method GET @require id=i32
+     * @access * 
+     * @uses api 
+     * @method GET 
+     * @require id=i32
      */
     public function get_with_composition($id) {
         $table = new Table("culture_medium");
@@ -62,7 +70,10 @@ class App {
 
     /**
      * Create a new culture_medium record
-     * @access * @uses api @method POST @require name=string
+     * @access * 
+     * @uses api 
+     * @method POST 
+     * @require name=string
      */
     public function create($name) {
         $table = new Table("culture_medium");
@@ -75,7 +86,10 @@ class App {
 
     /**
      * Update an existing culture_medium record
-     * @access * @uses api @method POST @require id=i32
+     * @access * 
+     * @uses api 
+     * @method POST 
+     * @require id=i32
      */
     public function update($id) {
         $table = new Table("culture_medium");
@@ -92,7 +106,10 @@ class App {
 
     /**
      * Delete a culture_medium record by ID
-     * @access * @uses api @method POST @require id=i32
+     * @access * 
+     * @uses api 
+     * @method POST 
+     * @require id=i32
      */
     public function delete($id) {
         $table = new Table("culture_medium");

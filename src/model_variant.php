@@ -23,7 +23,9 @@ class App {
 
     /**
      * List all model_variant records with optional pagination and filtering
-     * @access * @uses api @method GET
+     * @access * 
+     * @uses api 
+     * @method GET
      */
     public function list($page=1, $pageSize = 20) {
         $table = new Table("model_variant");
@@ -42,7 +44,10 @@ class App {
 
     /**
      * Get a single model_variant record by ID
-     * @access * @uses api @method GET @require id=i32
+     * @access * 
+     * @uses api 
+     * @method GET 
+     * @require id=i32
      */
     public function get($id) {
         $table = new Table("model_variant");
@@ -53,7 +58,10 @@ class App {
 
     /**
      * List model variants by model_id
-     * @access * @uses api @method GET @require model_id=i32
+     * @access * 
+     * @uses api 
+     * @method GET 
+     * @require model_id=i32
      */
     public function list_by_model($model_id) {
         $table = new Table("model_variant");
@@ -63,7 +71,10 @@ class App {
 
     /**
      * Get model variant with its variant detail records
-     * @access * @uses api @method GET @require id=i32
+     * @access * 
+     * @uses api 
+     * @method GET 
+     * @require id=i32
      */
     public function get_with_variants($id) {
         $table = new Table("model_variant");
@@ -76,7 +87,10 @@ class App {
 
     /**
      * Create a new model_variant record
-     * @access * @uses api @method POST @require model_id=i32|name=string
+     * @access * 
+     * @uses api 
+     * @method POST 
+     * @require model_id=i32|name=string
      */
     public function create($model_id, $name) {
         $table = new Table("model_variant");
@@ -93,7 +107,10 @@ class App {
 
     /**
      * Update an existing model_variant record
-     * @access * @uses api @method POST @require id=i32
+     * @access * 
+     * @uses api 
+     * @method POST 
+     * @require id=i32
      */
     public function update($id) {
         $table = new Table("model_variant");
@@ -116,7 +133,10 @@ class App {
 
     /**
      * Delete a model_variant record by ID
-     * @access * @uses api @method POST @require id=i32
+     * @access * 
+     * @uses api 
+     * @method POST 
+     * @require id=i32
      */
     public function delete($id) {
         $table = new Table("model_variant");

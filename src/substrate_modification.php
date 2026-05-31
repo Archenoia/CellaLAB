@@ -22,7 +22,9 @@ class App {
 
     /**
      * List all substrate_modification records with optional pagination and filtering
-     * @access * @uses api @method GET
+     * @access * 
+     * @uses api 
+     * @method GET
      */
     public function list($page=1, $pageSize = 20) {
         $table = new Table("substrate_modification");
@@ -41,7 +43,10 @@ class App {
 
     /**
      * Get a single substrate_modification record by ID
-     * @access * @uses api @method GET @require id=i32
+     * @access * 
+     * @uses api 
+     * @method GET 
+     * @require id=i32
      */
     public function get($id) {
         $table = new Table("substrate_modification");
@@ -52,7 +57,10 @@ class App {
 
     /**
      * List modifications by experiment_id
-     * @access * @uses api @method GET @require experiment_id=i32
+     * @access * 
+     * @uses api 
+     * @method GET 
+     * @require experiment_id=i32
      */
     public function list_by_experiment($experiment_id) {
         $table = new Table("substrate_modification");
@@ -62,7 +70,10 @@ class App {
 
     /**
      * Create a new substrate_modification record
-     * @access * @uses api @method POST @require experiment_id=i32|metabolite_id=string|content=double
+     * @access * 
+     * @uses api 
+     * @method POST 
+     * @require experiment_id=i32|metabolite_id=string|content=double
      */
     public function create($experiment_id, $metabolite_id, $content) {
         $table = new Table("substrate_modification");
@@ -81,7 +92,10 @@ class App {
 
     /**
      * Update an existing substrate_modification record
-     * @access * @uses api @method POST @require id=i32
+     * @access * 
+     * @uses api 
+     * @method POST 
+     * @require id=i32
      */
     public function update($id) {
         $table = new Table("substrate_modification");
@@ -108,7 +122,10 @@ class App {
 
     /**
      * Delete a substrate_modification record by ID
-     * @access * @uses api @method POST @require id=i32
+     * @access * 
+     * @uses api 
+     * @method POST 
+     * @require id=i32
      */
     public function delete($id) {
         $table = new Table("substrate_modification");

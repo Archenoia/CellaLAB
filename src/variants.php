@@ -85,7 +85,10 @@ class App {
 
     /**
      * Create a new variants record
-     * @access * @uses api @method POST @require variant_id=i32|type=string|object_id=string
+     * @access * 
+     * @uses api 
+     * @method POST 
+     * @require variant_id=i32|type=string|object_id=string
      */
     public function create($variant_id, $type, $object_id) {
         $table = new Table("variants");
@@ -108,7 +111,10 @@ class App {
 
     /**
      * Update an existing variants record
-     * @access * @uses api @method POST @require id=i32
+     * @access * 
+     * @uses api 
+     * @method POST 
+     * @require id=i32
      */
     public function update($id) {
         $table = new Table("variants");
@@ -138,7 +144,10 @@ class App {
 
     /**
      * Delete a variants record by ID
-     * @access * @uses api @method POST @require id=i32
+     * @access * 
+     * @uses api
+     * @method POST 
+     * @require id=i32
      */
     public function delete($id) {
         $table = new Table("variants");

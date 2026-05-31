@@ -24,7 +24,9 @@ class App {
 
     /**
      * List all experiment records with optional pagination and filtering
-     * @access * @uses api @method GET
+     * @access * 
+     * @uses api 
+     * @method GET
      */
     public function list($page=1, $pageSize = 20) {
         $table = new Table("experiment");
@@ -46,7 +48,10 @@ class App {
 
     /**
      * Get a single experiment record by ID
-     * @access * @uses api @method GET @require id=i32
+     * @access * 
+     * @uses api 
+     * @method GET 
+     * @require id=i32
      */
     public function get($id) {
         $table = new Table("experiment");
@@ -57,7 +62,10 @@ class App {
 
     /**
      * List experiments by project (proj_id)
-     * @access * @uses api @method GET @require proj_id=i32
+     * @access * 
+     * @uses api 
+     * @method GET 
+     * @require proj_id=i32
      */
     public function list_by_project($proj_id) {
         $table = new Table("experiment");
@@ -67,7 +75,10 @@ class App {
 
     /**
      * List experiments by culture_medium
-     * @access * @uses api @method GET @require culture_medium=i32
+     * @access * 
+     * @uses api 
+     * @method GET 
+     * @require culture_medium=i32
      */
     public function list_by_culture_medium($culture_medium) {
         $table = new Table("experiment");
@@ -77,7 +88,10 @@ class App {
 
     /**
      * Get experiment with related dynamics and substrate_modification data
-     * @access * @uses api @method GET @require id=i32
+     * @access * 
+     * @uses api 
+     * @method GET 
+     * @require id=i32
      */
     public function get_full($id) {
         $table = new Table("experiment");
@@ -92,7 +106,10 @@ class App {
 
     /**
      * Create a new experiment record
-     * @access * @uses api @method POST @require proj_id=i32|name=string
+     * @access * 
+     * @uses api 
+     * @method POST 
+     * @require proj_id=i32|name=string
      */
     public function create($proj_id, $name) {
         $table = new Table("experiment");
@@ -116,7 +133,10 @@ class App {
 
     /**
      * Update an existing experiment record
-     * @access * @uses api @method POST @require id=i32
+     * @access * 
+     * @uses api 
+     * @method POST 
+     * @require id=i32
      */
     public function update($id) {
         $table = new Table("experiment");
@@ -146,7 +166,10 @@ class App {
 
     /**
      * Delete an experiment record by ID
-     * @access * @uses api @method POST @require id=i32
+     * @access * 
+     * @uses api 
+     * @method POST 
+     * @require id=i32
      */
     public function delete($id) {
         $table = new Table("experiment");

@@ -23,7 +23,9 @@ class App {
 
     /**
      * List all community records with optional pagination and filtering
-     * @access * @uses api @method GET
+     * @access * 
+     * @uses api 
+     * @method GET
      */
     public function list($page = 1, $pageSize = 20) {
         $table = new Table("community");
@@ -42,7 +44,10 @@ class App {
 
     /**
      * Get a single community record by ID
-     * @access * @uses api @method GET @require id=i32
+     * @access * 
+     * @uses api 
+     * @method GET 
+     * @require id=i32
      */
     public function get($id) {
         $table = new Table("community");
@@ -53,7 +58,10 @@ class App {
 
     /**
      * List communities by project_id
-     * @access * @uses api @method GET @require project_id=i32
+     * @access * 
+     * @uses api 
+     * @method GET 
+     * @require project_id=i32
      */
     public function list_by_project($project_id) {
         $table = new Table("community");
@@ -63,7 +71,10 @@ class App {
 
     /**
      * Get community with its formula details
-     * @access * @uses api @method GET @require id=i32
+     * @access * 
+     * @uses api 
+     * @method GET 
+     * @require id=i32
      */
     public function get_with_formula($id) {
         $table = new Table("community");
@@ -119,7 +130,10 @@ class App {
 
     /**
      * Delete a community record by ID
-     * @access * @uses api @method POST @require id=i32
+     * @access * 
+     * @uses api 
+     * @method POST 
+     * @require id=i32
      */
     public function delete($id) {
         $table = new Table("community");

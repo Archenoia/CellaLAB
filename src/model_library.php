@@ -21,7 +21,9 @@ class App {
 
     /**
      * List all model_library records with optional pagination and filtering
-     * @access * @uses api @method GET
+     * @access * 
+     * @uses api 
+     * @method GET
      */
     public function list($page=1, $pageSize = 20) {
         $table = new Table("model_library");
@@ -40,7 +42,10 @@ class App {
 
     /**
      * Get a single model_library record by ID
-     * @access * @uses api @method GET @require id=i32
+     * @access * 
+     * @uses api 
+     * @method GET 
+     * @require id=i32
      */
     public function get($id) {
         $table = new Table("model_library");
@@ -51,7 +56,10 @@ class App {
 
     /**
      * Create a new model_library record
-     * @access * @uses api @method POST @require name=string
+     * @access * 
+     * @uses api 
+     * @method POST 
+     * @require name=string
      */
     public function create($name) {
         $table = new Table("model_library");
@@ -67,7 +75,10 @@ class App {
 
     /**
      * Update an existing model_library record
-     * @access * @uses api @method POST @require id=i32
+     * @access * 
+     * @uses api 
+     * @method POST 
+     * @require id=i32
      */
     public function update($id) {
         $table = new Table("model_library");
@@ -87,7 +98,10 @@ class App {
 
     /**
      * Delete a model_library record by ID
-     * @access * @uses api @method POST @require id=i32
+     * @access * 
+     * @uses api 
+     * @method POST 
+     * @require id=i32
      */
     public function delete($id) {
         $table = new Table("model_library");
