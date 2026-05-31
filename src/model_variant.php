@@ -25,10 +25,9 @@ class App {
      * List all model_variant records with optional pagination and filtering
      * @access * @uses api @method GET
      */
-    public function list() {
+    public function list($page=1, $pageSize = 20) {
         $table = new Table("model_variant");
-        $page = isset($_GET["page"]) ? intval($_GET["page"]) : 1;
-        $pageSize = isset($_GET["page_size"]) ? intval($_GET["page_size"]) : 20;
+        
         if (isset($_GET["name"]) && !empty($_GET["name"])) {
             $table = $table->where(["name" => like("%" . $_GET["name"] . "%")]);
         }

@@ -26,10 +26,9 @@ class App {
      * List all community_formula records with optional pagination and filtering
      * @access * @uses api @method GET
      */
-    public function list() {
+    public function list($page=1, $pageSize = 20) {
         $table = new Table("community_formula");
-        $page = isset($_GET["page"]) ? intval($_GET["page"]) : 1;
-        $pageSize = isset($_GET["page_size"]) ? intval($_GET["page_size"]) : 20;
+        
         if (isset($_GET["community_id"]) && !empty($_GET["community_id"])) {
             $table = $table->where(["community_id" => intval($_GET["community_id"])]);
         }

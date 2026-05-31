@@ -26,10 +26,9 @@ class App {
      * List all dynamics records with optional pagination and filtering
      * @access * @uses api @method GET
      */
-    public function list() {
+    public function list($page=1, $pageSize = 20) {
         $table = new Table("dynamics");
-        $page = isset($_GET["page"]) ? intval($_GET["page"]) : 1;
-        $pageSize = isset($_GET["page_size"]) ? intval($_GET["page_size"]) : 20;
+    
         if (isset($_GET["experiment_id"]) && !empty($_GET["experiment_id"])) {
             $table = $table->where(["experiment_id" => intval($_GET["experiment_id"])]);
         }

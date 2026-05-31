@@ -24,10 +24,9 @@ class App {
      * List all substrate_composition records with optional pagination and filtering
      * @access * @uses api @method GET
      */
-    public function list() {
+    public function list($page=1, $pageSize = 20) {
         $table = new Table("substrate_composition");
-        $page = isset($_GET["page"]) ? intval($_GET["page"]) : 1;
-        $pageSize = isset($_GET["page_size"]) ? intval($_GET["page_size"]) : 20;
+        
         if (isset($_GET["culture_medium"]) && !empty($_GET["culture_medium"])) {
             $table = $table->where(["culture_medium" => intval($_GET["culture_medium"])]);
         }
