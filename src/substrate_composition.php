@@ -22,7 +22,9 @@ class App {
 
     /**
      * List all substrate_composition records with optional pagination and filtering
-     * @access * @uses api @method GET
+     * @access * 
+     * @uses api 
+     * @method GET
      */
     public function list($page=1, $pageSize = 20) {
         $table = new Table("substrate_composition");
@@ -41,7 +43,10 @@ class App {
 
     /**
      * Get a single substrate_composition record by ID
-     * @access * @uses api @method GET @require id=i32
+     * @access * 
+     * @uses api 
+     * @method GET 
+     * @require id=i32
      */
     public function get($id) {
         $table = new Table("substrate_composition");
@@ -52,7 +57,10 @@ class App {
 
     /**
      * List compositions by culture_medium
-     * @access * @uses api @method GET @require culture_medium=i32
+     * @access * 
+     * @uses api 
+     * @method GET 
+     * @require culture_medium=i32
      */
     public function list_by_medium($culture_medium) {
         $table = new Table("substrate_composition");
@@ -62,7 +70,10 @@ class App {
 
     /**
      * Create a new substrate_composition record
-     * @access * @uses api @method POST @require culture_medium=i32|metabolite_id=string|content=double
+     * @access * 
+     * @uses api 
+     * @method POST 
+     * @require culture_medium=i32|metabolite_id=string|content=double
      */
     public function create($culture_medium, $metabolite_id, $content) {
         $table = new Table("substrate_composition");
@@ -81,7 +92,10 @@ class App {
 
     /**
      * Update an existing substrate_composition record
-     * @access * @uses api @method POST @require id=i32
+     * @access * 
+     * @uses api 
+     * @method POST 
+     * @require id=i32
      */
     public function update($id) {
         $table = new Table("substrate_composition");
@@ -108,7 +122,10 @@ class App {
 
     /**
      * Delete a substrate_composition record by ID
-     * @access * @uses api @method POST @require id=i32
+     * @access * 
+     * @uses api 
+     * @method POST 
+     * @require id=i32
      */
     public function delete($id) {
         $table = new Table("substrate_composition");

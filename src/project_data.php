@@ -22,7 +22,9 @@ class App {
 
     /**
      * List all project_data records with optional pagination and filtering
-     * @access * @uses api @method GET
+     * @access * 
+     * @uses api 
+     * @method GET
      */
     public function list($page = 1, $pageSize = 20) {
         $table = new Table("project_data");
@@ -41,7 +43,10 @@ class App {
 
     /**
      * Get a single project_data record by ID
-     * @access * @uses api @method GET @require id=i32
+     * @access * 
+     * @uses api 
+     * @method GET 
+     * @require id=i32
      */
     public function get($id) {
         $table = new Table("project_data");
@@ -52,7 +57,10 @@ class App {
 
     /**
      * Get a project_data record by project_id string
-     * @access * @uses api @method GET @require project_id=string
+     * @access * 
+     * @uses api 
+     * @method GET 
+     * @require project_id=string
      */
     public function get_by_project_id($project_id) {
         $table = new Table("project_data");
@@ -63,7 +71,10 @@ class App {
 
     /**
      * Create a new project_data record
-     * @access * @uses api @method POST @require project_id=string|name=string
+     * @access * 
+     * @uses api 
+     * @method POST 
+     * @require project_id=string|name=string
      */
     public function create($project_id, $name) {
         $table = new Table("project_data");
@@ -78,7 +89,10 @@ class App {
 
     /**
      * Update an existing project_data record
-     * @access * @uses api @method POST @require id=i32
+     * @access * 
+     * @uses api 
+     * @method POST 
+     * @require id=i32
      */
     public function update($id) {
         $table = new Table("project_data");
@@ -100,7 +114,10 @@ class App {
 
     /**
      * Delete a project_data record by ID
-     * @access * @uses api @method POST @require id=i32
+     * @access * 
+     * @uses api 
+     * @method POST 
+     * @require id=i32
      */
     public function delete($id) {
         $table = new Table("project_data");
