@@ -1,4 +1,7 @@
 <?php
+
+include dirname(__DIR__) . "/etc/bootstrap.php";
+
 /**
  * project_data Controller
  * 

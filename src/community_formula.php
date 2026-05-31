@@ -1,4 +1,7 @@
 <?php
+
+include dirname(__DIR__) . "/etc/bootstrap.php";
+
 /**
  * community_formula Controller
  * 
