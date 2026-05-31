@@ -24,7 +24,9 @@ class App {
 
     /**
      * List all variants records with optional pagination and filtering
-     * @access * @uses api @method GET
+     * @access * 
+     * @uses api 
+     * @method GET
      */
     public function list($page=1, $pageSize = 20) {
         $table = new Table("variants");
@@ -43,7 +45,10 @@ class App {
 
     /**
      * Get a single variants record by ID
-     * @access * @uses api @method GET @require id=i32
+     * @access *
+     * @uses api 
+     * @method GET
+     * @require id=i32
      */
     public function get($id) {
         $table = new Table("variants");
@@ -54,7 +59,10 @@ class App {
 
     /**
      * List variants by variant_id (model_variant FK)
-     * @access * @uses api @method GET @require variant_id=i32
+     * @access * 
+     * @uses api 
+     * @method GET 
+     * @require variant_id=i32
      */
     public function list_by_variant($variant_id) {
         $table = new Table("variants");
@@ -64,7 +72,10 @@ class App {
 
     /**
      * List variants by type
-     * @access * @uses api @method GET @require type=string
+     * @access * 
+     * @uses api 
+     * @method GET 
+     * @require type=string
      */
     public function list_by_type($type) {
         $table = new Table("variants");
