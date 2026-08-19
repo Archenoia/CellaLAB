@@ -1,0 +1,55 @@
+{
+  "code": 0,
+  "message": "success",
+  "data": {
+    "sample_id": "MGS002",
+    "name": "Lake Water Metagenome LW-04",
+    "environment": "湖水",
+    "host": "—",
+    "location": "Taihu Lake, China",
+    "collection_date": "2025-09-18",
+    "sequencing_platform": "Illumina NovaSeq 6000",
+    "read_count": 12700000,
+    "n_mags": 28,
+    "source": "Metagenome v3 (environmental survey)",
+    "composition": [
+      { "name": "Proteobacteria", "abundance": 0.38 },
+      { "name": "Bacteroidetes", "abundance": 0.21 },
+      { "name": "Actinobacteria", "abundance": 0.17 },
+      { "name": "Cyanobacteria", "abundance": 0.14 },
+      { "name": "Verrucomicrobia", "abundance": 0.06 },
+      { "name": "Others", "abundance": 0.04 }
+    ],
+    "cluster_tree": {
+      "name": "MAGs",
+      "children": [
+        { "name": "Pro_A", "value": 1, "leaf": true, "taxon": "Proteobacteria" },
+        { "name": "Pro_B", "value": 1, "leaf": true, "taxon": "Proteobacteria" },
+        { "name": "Bac_A", "value": 1, "leaf": true, "taxon": "Bacteroidetes" },
+        { "name": "Act_A", "value": 1, "leaf": true, "taxon": "Actinobacteria" },
+        { "name": "Cya_A", "value": 1, "leaf": true, "taxon": "Cyanobacteria" }
+      ]
+    },
+    "genes": [
+      { "gene_id": "GENE030", "product": "nitrogenase reductase", "taxon": "Cyanobacteria sp.", "pathway": "NITROGEN-CYCLE" },
+      { "gene_id": "GENE031", "product": "ammonia monooxygenase", "taxon": "Nitrosomonas sp.", "pathway": "NITROGEN-CYCLE" },
+      { "gene_id": "GENE032", "product": "nitrate reductase", "taxon": "Pseudomonas sp.", "pathway": "NITROGEN-CYCLE" }
+    ],
+    "pathways": [
+      { "pathway_id": "NITROGEN-CYCLE", "name": "Nitrogen Cycle", "coverage": 0.88 },
+      { "pathway_id": "PWY-PHOTO", "name": "Photosynthesis", "coverage": 0.64 }
+    ],
+    "keywords": [
+      { "name": "nitrogen", "value": 210 },
+      { "name": "cyanobacteria", "value": 180 },
+      { "name": "photosynthesis", "value": 150 },
+      { "name": "ammonia", "value": 120 },
+      { "name": "nitrate", "value": 110 },
+      { "name": "Proteobacteria", "value": 98 },
+      { "name": "carbon", "value": 84 },
+      { "name": "reduction", "value": 70 },
+      { "name": "oxygen", "value": 60 },
+      { "name": "fixation", "value": 48 }
+    ]
+  }
+}
