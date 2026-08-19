@@ -1,0 +1,46 @@
+{
+  "code": 0,
+  "message": "success",
+  "data": {
+    "consortium_id": "COD002",
+    "name": "Tryptophan-derived Metabolite Consortium T-1",
+    "alias": "T-1",
+    "function": "色氨酸代谢 / 吲哚衍生物合成",
+    "source": "行业产品记录 (SynBio Catalog 2025)",
+    "design_basis": "基于色氨酸代谢分工的合成菌群",
+    "n_strains": 5,
+    "description": "COD002 由 5 株菌组成，专注于色氨酸向吲哚-3-丙酸（IPA）与色胺的转化，参与宿主免疫调节。菌株间通过色氨酸中间体交叉喂养维持通路通量。",
+    "composition": [
+      { "name": "Clostridium sporogenes", "phylum": "Firmicutes", "abundance": 0.30 },
+      { "name": "Lactobacillus reuteri", "phylum": "Firmicutes", "abundance": 0.26 },
+      { "name": "Bacteroides thetaiotaomicron", "phylum": "Bacteroidetes", "abundance": 0.22 },
+      { "name": "Escherichia coli", "phylum": "Proteobacteria", "abundance": 0.14 },
+      { "name": "Bifidobacterium adolescentis", "phylum": "Actinobacteria", "abundance": 0.08 }
+    ],
+    "strains": [
+      { "strain_id": "ST101", "species": "Clostridium sporogenes", "phylum": "Firmicutes", "abundance": 0.30, "role": "indole producer", "metabolism": "Tryptophan metabolism" },
+      { "strain_id": "ST102", "species": "Lactobacillus reuteri", "phylum": "Firmicutes", "abundance": 0.26, "role": "IPA producer", "metabolism": "Tryptophan metabolism" },
+      { "strain_id": "ST103", "species": "Bacteroides thetaiotaomicron", "phylum": "Bacteroidetes", "abundance": 0.22, "role": "indole precursor", "metabolism": "Tryptophan metabolism" },
+      { "strain_id": "ST104", "species": "Escherichia coli", "phylum": "Proteobacteria", "abundance": 0.14, "role": "tryptophan auxotroph", "metabolism": "Tryptophan metabolism" },
+      { "strain_id": "ST105", "species": "Bifidobacterium adolescentis", "phylum": "Actinobacteria", "abundance": 0.08, "role": "folate producer", "metabolism": "Vitamin synthesis" }
+    ],
+    "umap": {
+      "note": "菌株代谢能力的三维 UMAP 嵌入",
+      "points": [
+        { "strain_id": "ST101", "coords": [-1.4, 0.8, 0.5], "function": "Tryptophan metabolism", "abundance": 0.30 },
+        { "strain_id": "ST102", "coords": [-0.8, 1.6, -0.2], "function": "Tryptophan metabolism", "abundance": 0.26 },
+        { "strain_id": "ST103", "coords": [1.2, -1.0, 0.3], "function": "Tryptophan metabolism", "abundance": 0.22 },
+        { "strain_id": "ST104", "coords": [0.9, 0.2, -0.7], "function": "Tryptophan metabolism", "abundance": 0.14 },
+        { "strain_id": "ST105", "coords": [-1.0, -1.4, 1.0], "function": "Vitamin synthesis", "abundance": 0.08 }
+      ]
+    },
+    "interactions": [
+      { "from": "ST103", "to": "ST101", "type": "cross_feeding", "metabolite": "tryptophan precursor" },
+      { "from": "ST101", "to": "ST102", "type": "cross_feeding", "metabolite": "indole" },
+      { "from": "ST105", "to": "ST104", "type": "complementary", "metabolite": "folate" },
+      { "from": "ST104", "to": "ST103", "type": "competition", "metabolite": "tryptophan" },
+      { "from": "ST102", "to": "ST105", "type": "antagonism", "metabolite": "acidification" },
+      { "from": "ST101", "to": "ST102", "type": "biosynthesis", "metabolite": "IPA pathway" }
+    ]
+  }
+}
