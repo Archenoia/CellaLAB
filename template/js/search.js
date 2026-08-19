@@ -3,7 +3,7 @@
   "use strict";
   CellaApp.initLayout("search");
 
-  var catLabel = { consortium: "合成菌群", taxon: "物种", gene: "基因", sample: "样本", enzyme: "酶", pathway: "通路" };
+  var catLabel = { consortium: "合成菌群", taxon: "物种", gene: "基因", sample: "样本", enzyme: "酶", pathway: "通路", pangenome: "泛基因组" };
 
   CellaApp.fetchJSON("data/api/search/hot.json").then(function (data) {
     document.getElementById("hotwords").innerHTML = data.hot_terms.map(function (t) {
