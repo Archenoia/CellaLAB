@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>合成菌群 — Cella LAB</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+  <main class="page">
+    <div id="breadcrumb" class="breadcrumb"></div>
+    <div id="detail-head"></div>
+
+    <div class="card">
+      <div class="card-head"><h3>微生物群落组成</h3>
+        <div class="btn-row right">
+          <button class="btn sm" id="btn-pie">饼图</button>
+          <button class="btn sm" id="btn-bar">柱状图</button>
+        </div>
+      </div>
+      <div class="card-body flush"><div id="chart-comp" class="chart"></div></div>
+    </div>
+
+    <div class="card">
+      <div class="card-head"><h3>菌株代谢能力三维 UMAP 嵌入</h3><span class="sub">按代谢功能着色，点大小表示相对丰度</span></div>
+      <div class="card-body flush"><div id="chart-umap" class="chart tall"></div></div>
+    </div>
+
+    <div class="card">
+      <div class="card-head"><h3>菌株交叉喂养网络</h3><span class="sub">展示菌株间互作关系</span></div>
+      <div class="card-body">
+        <div id="chart-net" class="chart tall"></div>
+        <div class="legend">
+          <div class="item"><span class="swatch" style="border-top-color:#8f3a3a"></span>拮抗关系</div>
+          <div class="item"><span class="swatch" style="border-top-color:#3a8f5f"></span>营养互补</div>
+          <div class="item"><span class="swatch" style="border-top-color:#c1873b"></span>营养竞争</div>
+          <div class="item"><span class="swatch" style="border-top-color:#3a7f8f;border-top-style:dashed"></span>跨菌株生物合成通路</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-head"><h3>菌株列表</h3></div>
+      <div class="card-body flush"><div id="strain-table"></div></div>
+    </div>
+
+    <div class="card">
+      <div class="card-head"><h3>菌群功能描述</h3></div>
+      <div class="card-body"><p id="func-desc" class="muted"></p></div>
+    </div>
+  </main>
+
+  <script src="vendor/echarts/echarts.min.js"></script>
+  <script src="vendor/echarts-gl/echarts-gl.min.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/consortium.js"></script>
+</body>
+</html>
