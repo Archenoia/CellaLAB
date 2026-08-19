@@ -13,11 +13,11 @@
 
   CellaApp.fetchJSON("data/api/gene/" + id + ".json").then(function (d) {
     data = d;
-    renderHead(d);
-    renderPfam(d);
-    renderFasta(d);
-    renderAssocs(d);
-    renderPathwayTable(d);
+    try { renderHead(d); } catch (e) { CellaApp.showError("detail-head", "head: " + e.message + " " + (e.stack || "")); return; }
+    try { renderPfam(d); } catch (e) { CellaApp.showError("detail-head", "pfam: " + e.message + " " + (e.stack || "")); return; }
+    try { renderFasta(d); } catch (e) { CellaApp.showError("detail-head", "fasta: " + e.message); return; }
+    try { renderAssocs(d); } catch (e) { CellaApp.showError("detail-head", "assocs: " + e.message); return; }
+    try { renderPathwayTable(d); } catch (e) { CellaApp.showError("detail-head", "pathway: " + e.message); return; }
   }).catch(function (e) { CellaApp.showError("detail-head", e.message); });
 
   function renderHead(d) {
@@ -42,15 +42,15 @@
     d.pfam.forEach(function (p) { if (p.end > maxPos) maxPos = p.end; });
     var items = d.pfam.map(function (p, i) {
       return {
-        name: p.name, family: p.family,
+        name: p.name, family: p.family, description: p.description,
         value: [p.name, i, p.start, p.end],
-        itemStyle: { color: FAM_COLORS[i % FAM_COLORS.length] },
-        description: p.description
+        itemStyle: { color: FAM_COLORS[i % FAM_COLORS.length] }
       };
     });
     chart.setOption({
       tooltip: { formatter: function (p) {
-        var v = p.data.value; return p.data.family + " · " + p.data.name + "<br/>区间 " + v[2] + "–" + v[3] + "<br/>" + p.data.description;
+        var it = items[p.dataIndex]; var v = p.value;
+        return it.family + " · " + it.name + "<br/>区间 " + v[2] + "–" + v[3] + "<br/>" + it.description;
       } },
       grid: { left: 90, right: 20, top: 16, bottom: 30 },
       xAxis: { type: "value", max: maxPos, name: "氨基酸位置", axisLabel: { fontSize: 11 } },
@@ -58,6 +58,7 @@
       series: [{
         type: "custom", barWidth: "60%",
         renderItem: function (params, api) {
+          var it = items[params.dataIndex];
           var yCat = api.value(1);
           var start = api.coord([api.value(2), yCat])[0];
           var end = api.coord([api.value(3), yCat])[0];
@@ -67,7 +68,7 @@
           return {
             type: "group", children: [
               { type: "rect", shape: { x: start, y: yPix, width: rectWidth, height: height }, style: api.style() },
-              { type: "text", style: { text: rectWidth > 46 ? params.data.family : "", x: start + 6, y: yPix + height / 2,
+              { type: "text", style: { text: rectWidth > 46 ? it.family : "", x: start + 6, y: yPix + height / 2,
                 fontSize: 11, fill: "#fff", textVerticalAlign: "middle" } }
             ]
           };
