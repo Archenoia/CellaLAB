@@ -1,0 +1,39 @@
+{
+  "code": 0,
+  "message": "success",
+  "data": {
+    "counts": {
+      "consortium": 128,
+      "metagenome": 346,
+      "pangenome": 57,
+      "pathway": 412,
+      "gene": 18920,
+      "species": 2541
+    },
+    "overview_pie": {
+      "title": "合成菌群功能分类",
+      "subtext": "按主导功能划分的收录合成菌群",
+      "data": [
+        { "name": "短链脂肪酸合成", "value": 38 },
+        { "name": "色氨酸代谢", "value": 21 },
+        { "name": "胆汁酸转化", "value": 17 },
+        { "name": "氮循环", "value": 14 },
+        { "name": "污染物降解", "value": 22 },
+        { "name": "其他功能", "value": 16 }
+      ]
+    },
+    "overview_bar": {
+      "title": "宏基因组样本环境分布",
+      "subtext": "各环境来源的采样样本数量",
+      "categories": ["粪便", "废水", "土壤", "湖水", "瘤胃", "海洋"],
+      "values": [142, 78, 65, 31, 18, 12]
+    },
+    "latest": [
+      { "type": "consortium", "id": "COD002", "name": "Tryptophan-derived Metabolite Consortium T-1", "date": "2026-08-12" },
+      { "type": "metagenome", "id": "MGS002", "name": "Lake Water Metagenome LW-04", "date": "2026-08-09" },
+      { "type": "pangenome", "id": "PAN001", "name": "Butyrate Producers Pangenome", "date": "2026-08-05" },
+      { "type": "pathway", "id": "PW001", "name": "Butanoate Biosynthesis (PWY-567)", "date": "2026-08-01" },
+      { "type": "gene", "id": "GENE001", "name": "butD — butyryl-CoA dehydrogenase", "date": "2026-07-28" }
+    ]
+  }
+}
