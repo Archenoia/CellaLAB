@@ -1,0 +1,64 @@
+{
+  "code": 0,
+  "message": "success",
+  "data": {
+    "sample_id": "MGS001",
+    "name": "Human Gut Metagenome HG-12",
+    "environment": "粪便",
+    "host": "Homo sapiens",
+    "location": "Shanghai, China",
+    "collection_date": "2025-11-03",
+    "sequencing_platform": "Illumina NovaSeq 6000",
+    "read_count": 18400000,
+    "n_mags": 42,
+    "source": "Metagenome v3 (internal cohort)",
+    "composition": [
+      { "name": "Firmicutes", "abundance": 0.41 },
+      { "name": "Bacteroidetes", "abundance": 0.29 },
+      { "name": "Actinobacteria", "abundance": 0.13 },
+      { "name": "Proteobacteria", "abundance": 0.09 },
+      { "name": "Verrucomicrobia", "abundance": 0.05 },
+      { "name": "Others", "abundance": 0.03 }
+    ],
+    "cluster_tree": {
+      "name": "MAGs",
+      "children": [
+        { "name": "Fir_A", "value": 1, "leaf": true, "taxon": "Firmicutes" },
+        { "name": "Fir_B", "value": 1, "leaf": true, "taxon": "Firmicutes" },
+        { "name": "Fir_C", "value": 1, "leaf": true, "taxon": "Firmicutes" },
+        { "name": "Bac_A", "value": 1, "leaf": true, "taxon": "Bacteroidetes" },
+        { "name": "Bac_B", "value": 1, "leaf": true, "taxon": "Bacteroidetes" },
+        { "name": "Act_A", "value": 1, "leaf": true, "taxon": "Actinobacteria" },
+        { "name": "Pro_A", "value": 1, "leaf": true, "taxon": "Proteobacteria" },
+        { "name": "Ver_A", "value": 1, "leaf": true, "taxon": "Verrucomicrobia" }
+      ]
+    },
+    "genes": [
+      { "gene_id": "GENE001", "product": "butyryl-CoA dehydrogenase", "taxon": "Faecalibacterium prausnitzii", "pathway": "PWY-567" },
+      { "gene_id": "GENE002", "product": "butyrate kinase", "taxon": "Roseburia intestinalis", "pathway": "PWY-567" },
+      { "gene_id": "GENE003", "product": "butyryl-CoA:acetate CoA transferase", "taxon": "Faecalibacterium prausnitzii", "pathway": "PWY-567" },
+      { "gene_id": "GENE004", "product": "phosphotransbutyrylase", "taxon": "Blautia producta", "pathway": "PWY-567" },
+      { "gene_id": "GENE010", "product": "tryptophanase", "taxon": "Escherichia coli", "pathway": "PWY-TRP" },
+      { "gene_id": "GENE011", "product": "indole pyruvate decarboxylase", "taxon": "Clostridium sporogenes", "pathway": "PWY-TRP" }
+    ],
+    "pathways": [
+      { "pathway_id": "PWY-567", "name": "Butanoate Biosynthesis", "coverage": 0.92 },
+      { "pathway_id": "PWY-TRP", "name": "Tryptophan Metabolism", "coverage": 0.71 },
+      { "pathway_id": "PWY-PWY", "name": "Bile Acid Transformation", "coverage": 0.55 }
+    ],
+    "keywords": [
+      { "name": "butyrate", "value": 240 },
+      { "name": "acetate", "value": 198 },
+      { "name": "SCFA", "value": 176 },
+      { "name": "tryptophan", "value": 154 },
+      { "name": "indole", "value": 132 },
+      { "name": "lactate", "value": 121 },
+      { "name": "Firmicutes", "value": 110 },
+      { "name": "Bacteroidetes", "value": 96 },
+      { "name": "CoA", "value": 88 },
+      { "name": "fermentation", "value": 74 },
+      { "name": "cross-feeding", "value": 63 },
+      { "name": "bile acid", "value": 51 }
+    ]
+  }
+}
