@@ -43,7 +43,7 @@
     var items = d.pfam.map(function (p, i) {
       return {
         name: p.name, family: p.family,
-        value: [0, i, p.start, p.end],
+        value: [p.name, i, p.start, p.end],
         itemStyle: { color: FAM_COLORS[i % FAM_COLORS.length] },
         description: p.description
       };
@@ -61,14 +61,15 @@
           var yCat = api.value(1);
           var start = api.coord([api.value(2), yCat])[0];
           var end = api.coord([api.value(3), yCat])[0];
-          var height = api.size([0, 1])[1] * 0.6;
+          var height = api.size([0, 1])[1] * 0.5;
           var yPix = api.coord([0, yCat])[1] - height / 2;
+          var rectWidth = end - start;
           return {
-            type: "rect", shape: { x: start, y: yPix, width: end - start, height: height },
-            style: api.style(), children: [{
-              type: "text", style: { text: api.value(0, true) ? "" : params.data.family, x: start + 6, y: yPix + height / 2,
-                fontSize: 11, fill: "#fff", textVerticalAlign: "middle" }
-            }]
+            type: "group", children: [
+              { type: "rect", shape: { x: start, y: yPix, width: rectWidth, height: height }, style: api.style() },
+              { type: "text", style: { text: rectWidth > 46 ? params.data.family : "", x: start + 6, y: yPix + height / 2,
+                fontSize: 11, fill: "#fff", textVerticalAlign: "middle" } }
+            ]
           };
         },
         data: items
