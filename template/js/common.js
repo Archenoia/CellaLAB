@@ -54,9 +54,10 @@
       '<footer class="site-footer">' +
         '<div class="cols">' +
           '<div><h4>关于 Cella LAB</h4><ul>' +
-            '<li><a href="index.html">数据库简介</a></li>' +
-            '<li><a href="index.html">数据来源</a></li>' +
-            '<li><a href="index.html">更新日志</a></li>' +
+            '<li><a href="about.html">关于本站</a></li>' +
+            '<li><a href="privacy.html">隐私政策</a></li>' +
+            '<li><a href="terms.html">服务条款</a></li>' +
+            '<li><a href="cookies.html">Cookie 政策</a></li>' +
           "</ul></div>" +
           '<div><h4>数据模块</h4><ul>' +
             '<li><a href="consortium.html">合成菌群</a></li>' +
