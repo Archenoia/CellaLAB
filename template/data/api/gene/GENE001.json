@@ -1,0 +1,28 @@
+{
+  "code": 0,
+  "message": "success",
+  "data": {
+    "gene_id": "GENE001",
+    "name": "butD",
+    "product": "butyryl-CoA dehydrogenase",
+    "family_id": "Fam-001",
+    "family_category": "core",
+    "ec": "1.3.8.1",
+    "length_aa": 386,
+    "gc_content": 0.48,
+    "organism": "Faecalibacterium prausnitzii",
+    "associated_strains": ["ST001", "ST002", "ST006"],
+    "associated_samples": ["MGS001", "MGS002"],
+    "associated_consorts": ["COD001", "COD002"],
+    "fasta": ">GENE001|F.prausnitzii|butD|butyryl-CoA dehydrogenase\nATGGCTGACGACGATCGGCGAAGTCGCCGATCAGCGAGGCGTTGCCGGAGAACGGC\nGACCTGATCGAGAAGGCGCTGCTGGAGCAGCTGATCGCCAAGGTGATCGACGGCGT\nGCTGCCGGACGAGGCGGACGGCATCGAGGTGCTGACCGAGCAGGCGGAGCTGGCGG\nCGTTCGAGCAGGTGCTGCACGAGCACGGCGAGGTTCGCTTCGACGAGGCGCTGGCG\nGCCGAGGGCGGCATCCTGATCGAGGTGATCGACGACAAGGTGCTGACCGGCATCGA\nGGTGAACGGCATCGACGAGGCGCTGATCGCCGAGGCGCTGACCGGCATCGAGGTGCT\nGACCGAGCAGGCGGAGCTGGCGGCGTTCGAGCAGGTGCTGCACGAGCACGGCGAGGT\nTCGCTTCGACGAGGCGCTGGCGGCCGAGGGCGGCATCCTGATCGAGGTGATCGACGA\nCAAGGTGCTGACCGGCATCGAGGTGAACGGCATCGACGAGGCGCTGATCGCCGAGGC",
+    "pfam": [
+      { "family": "PF02771", "name": "Acyl-CoA_dh", "start": 12, "end": 180, "description": "Acyl-CoA dehydrogenase" },
+      { "family": "PF02772", "name": "Acyl-CoA_dh_M", "start": 181, "end": 300, "description": "Acyl-CoA dehydrogenase middle" },
+      { "family": "PF00441", "name": "3Beta_HSD", "start": 301, "end": 386, "description": "3-beta hydroxysteroid dehydrogenase" }
+    ],
+    "pathways": [
+      { "pathway_id": "PWY-567", "name": "Butanoate Biosynthesis" },
+      { "pathway_id": "PWY-FASYN", "name": "Fatty Acid Elongation" }
+    ]
+  }
+}
