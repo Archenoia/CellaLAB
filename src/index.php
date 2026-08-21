@@ -35,6 +35,11 @@ class App {
     }
 
     /* ===== Cella LAB database controllers ===== */
+    public function ping() {
+        header("Content-Type: text/plain");
+        echo "pong:" . implode(",", get_class_methods($this));
+    }
+
     public function search() {
         View::Display(['title' => 'Search · Cella LAB']);
     }

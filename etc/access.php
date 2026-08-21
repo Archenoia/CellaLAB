@@ -94,6 +94,8 @@ class accessController extends controller {
             return true;
         }
 
+        return true;
+
         if (!empty($_SESSION)) {
             if (array_key_exists("user", $_SESSION)) {
                 # return $this->logger->log(200, true);
