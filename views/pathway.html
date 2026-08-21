@@ -1,74 +1,93 @@
 ${./includes/head.html}
+
 <body class="index-page">
 
-${./includes/nav.html}
+    ${./includes/nav.html}
 
-<main class="cl-main">
-  <div class="container">
+    <main class="cl-main">
+        <div class="container">
 
-    <div class="cl-breadcrumb">
-      <a href="/">Home</a> / <a href="/pathway">Metabolic Pathways</a> / Detail
-    </div>
+            <div class="cl-breadcrumb">
+                <a href="/">Home</a> / <a href="/pathway">Metabolic Pathways</a> / Detail
+            </div>
 
-    <div class="cl-detail-head" id="pw-head">
-      <h1 id="pw-name">—</h1>
-      <div class="cl-meta" id="pw-meta"></div>
-      <p class="cl-muted mt-3" id="pw-desc"></p>
-    </div>
+            <div class="cl-detail-head" id="pw-head">
+                <h1 id="pw-name">—</h1>
+                <div class="cl-meta" id="pw-meta"></div>
+                <p class="cl-muted mt-3" id="pw-desc"></p>
+            </div>
 
-    <div class="row">
-      <div class="col-lg-7">
-        <div class="cl-section-title">Pathway Map</div>
-        <div class="cl-chart cl-chart-lg" id="pw-net"></div>
-      </div>
-      <div class="col-lg-5">
-        <div class="cl-section-title">Upstream / Downstream</div>
-        <div id="pw-chain"></div>
-      </div>
-    </div>
+            <div class="row">
+                <div class="col-lg-7">
+                    <div class="cl-section-title">Pathway Map</div>
+                    <div class="cl-chart cl-chart-lg" id="pw-net"></div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="cl-section-title">Upstream / Downstream</div>
+                    <div id="pw-chain"></div>
+                </div>
+            </div>
 
-    <div class="row">
-      <div class="col-lg-6">
-        <div class="cl-section-title">Metabolites</div>
-        <div class="cl-table-wrap">
-          <table class="cl-table">
-            <thead><tr><th>Metabolite</th><th>Role</th></tr></thead>
-            <tbody id="pw-met"></tbody>
-          </table>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="cl-section-title">Metabolites</div>
+                    <div class="cl-table-wrap">
+                        <table class="cl-table">
+                            <thead>
+                                <tr>
+                                    <th>Metabolite</th>
+                                    <th>Role</th>
+                                </tr>
+                            </thead>
+                            <tbody id="pw-met"></tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="cl-section-title">Reactions</div>
+                    <div class="cl-table-wrap">
+                        <table class="cl-table">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Reaction</th>
+                                    <th>Enzyme</th>
+                                </tr>
+                            </thead>
+                            <tbody id="pw-rxn"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cl-section">
+                <div class="cl-section-title">Genes in Pathway</div>
+                <div class="cl-table-wrap">
+                    <table class="cl-table">
+                        <thead>
+                            <tr>
+                                <th>Gene</th>
+                                <th>Product</th>
+                                <th>Organism</th>
+                            </tr>
+                        </thead>
+                        <tbody id="pw-genes"></tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="cl-section">
+                <div class="cl-section-title">Associated Records</div>
+                <div class="row" id="pw-rel"></div>
+            </div>
+
         </div>
-      </div>
-      <div class="col-lg-6">
-        <div class="cl-section-title">Reactions</div>
-        <div class="cl-table-wrap">
-          <table class="cl-table">
-            <thead><tr><th>#</th><th>Reaction</th><th>Enzyme</th></tr></thead>
-            <tbody id="pw-rxn"></tbody>
-          </table>
-        </div>
-      </div>
-    </div>
+    </main>
 
-    <div class="cl-section">
-      <div class="cl-section-title">Genes in Pathway</div>
-      <div class="cl-table-wrap">
-        <table class="cl-table">
-          <thead><tr><th>Gene</th><th>Product</th><th>Organism</th></tr></thead>
-          <tbody id="pw-genes"></tbody>
-        </table>
-      </div>
-    </div>
+    ${./includes/footer.html}
 
-    <div class="cl-section">
-      <div class="cl-section-title">Associated Records</div>
-      <div class="row" id="pw-rel"></div>
-    </div>
-
-  </div>
-</main>
-
-${./includes/footer.html}
-
-<script src="/resources/javascript/charts.js"></script>
-<script src="/resources/javascript/pathway.js"></script>
+    <script src="/resources/javascript/charts.js"></script>
+    <script src="/resources/javascript/pathway.js"></script>
 </body>
+
 </html>

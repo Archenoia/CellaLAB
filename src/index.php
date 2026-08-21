@@ -15,6 +15,16 @@ class App {
     }
 
     /**
+     * Cella LAB
+     * 
+     * @access *
+     * @uses view
+    */
+    public function about() {
+        View::Display(['title' => 'About · Cella LAB']);
+    }
+
+    /**
      * @access *
      * @uses view
      */
