@@ -10,8 +10,16 @@ class App {
      * @access *
      * @uses view
     */
-    public function index() {       
-        View::Display();
+    public function index() {
+        View::Display(['title' => 'Cella LAB · Synthetic Microbial Consortium Database']);
+    }
+
+    /**
+     * @access *
+     * @uses view
+     */
+    public function home() {
+        View::Display(['title' => 'Cella LAB · Synthetic Microbial Consortium Database']);
     }
     
     /**
@@ -35,35 +43,58 @@ class App {
     }
 
     /* ===== Cella LAB database controllers ===== */
-    public function ping() {
-        header("Content-Type: text/plain");
-        echo "pong:" . implode(",", get_class_methods($this));
-    }
-
+    /**
+     * @access *
+     * @uses view
+     */
     public function search() {
         View::Display(['title' => 'Search · Cella LAB']);
     }
 
-    public function searchResult() {
-        View::Display(['title' => 'Search Results · Cella LAB']);
+    /**
+     * @access *
+     * @uses view
+     */
+    public function search_result() {
+        View::Display(['title' => 'Search Results · Cella LAB'], 'search_result.html');
     }
 
+    /**
+     * @access *
+     * @uses view
+     */
     public function consortium() {
         View::Display(['title' => 'Synthetic Consortium · Cella LAB']);
     }
 
+    /**
+     * @access *
+     * @uses view
+     */
     public function metagenome() {
         View::Display(['title' => 'Metagenome Sample · Cella LAB']);
     }
 
+    /**
+     * @access *
+     * @uses view
+     */
     public function pangenome() {
         View::Display(['title' => 'Pangenome Analysis · Cella LAB']);
     }
 
+    /**
+     * @access *
+     * @uses view
+     */
     public function pathway() {
         View::Display(['title' => 'Metabolic Pathway · Cella LAB']);
     }
 
+    /**
+     * @access *
+     * @uses view
+     */
     public function gene() {
         View::Display(['title' => 'Gene · Cella LAB']);
     }
