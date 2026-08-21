@@ -1,0 +1,67 @@
+{
+  "id": "PG_0077",
+  "name": "Lactobacillus plantarum clade pangenome",
+  "taxon": "Lactobacillus plantarum (24 genomes)",
+  "genomes": 24,
+  "core_threshold": 0.99,
+  "family_counts": {
+    "core": 1450,
+    "soft_core": 890,
+    "shell": 3120,
+    "cloud": 5210
+  },
+  "curve": {
+    "x": [1, 2, 4, 8, 12, 16, 20, 24],
+    "pan_genome": [820, 1450, 2680, 4210, 5400, 6320, 7100, 7760],
+    "core_genome": [820, 800, 760, 700, 660, 620, 590, 560]
+  },
+  "pav": {
+    "genes": [
+      "G0001", "G0002", "G0003", "G0004", "G0005", "G0006", "G0007", "G0008", "G0009", "G0010",
+      "G0011", "G0012", "G0013", "G0014", "G0015", "G0016", "G0017", "G0018", "G0019", "G0020"
+    ],
+    "samples": ["S1", "S2", "S3", "S4", "S5", "S6", "S7", "S8", "S9", "S10", "S11", "S12"],
+    "matrix": [
+      [1,1,1,1,1,1,1,1,1,1,1,1],
+      [1,1,1,1,1,1,1,1,1,1,1,1],
+      [1,1,0,1,1,1,1,0,1,1,1,1],
+      [1,0,1,1,0,1,1,1,0,1,1,1],
+      [0,1,1,1,1,0,1,1,1,0,1,1],
+      [1,1,1,0,1,1,0,1,1,1,0,1],
+      [0,0,1,1,1,1,1,0,1,1,1,0],
+      [1,0,0,1,1,0,1,1,1,0,1,1],
+      [1,1,0,0,1,1,1,1,0,1,1,0],
+      [0,1,1,1,0,1,0,1,1,1,0,1],
+      [1,0,1,0,1,1,1,0,1,0,1,1],
+      [0,1,0,1,1,0,1,1,0,1,1,1],
+      [1,1,1,1,0,1,0,1,1,1,0,1],
+      [0,0,1,1,1,0,1,1,1,0,1,1],
+      [1,1,0,1,0,1,1,0,1,1,1,0],
+      [1,0,1,0,1,1,0,1,0,1,1,1],
+      [0,1,1,1,0,0,1,1,1,1,0,1],
+      [1,1,0,1,1,1,0,0,1,1,1,0],
+      [0,1,1,0,1,1,1,1,0,0,1,1],
+      [1,0,0,1,1,0,1,1,1,1,0,1]
+    ]
+  },
+  "sv": [
+    { "id": "SV01", "type": "Insertion", "chr": "contig_3", "start": 12450, "end": 13920, "size": 1470, "genes": 3 },
+    { "id": "SV02", "type": "Deletion", "chr": "contig_7", "start": 40120, "end": 41880, "size": 1760, "genes": 2 },
+    { "id": "SV03", "type": "Inversion", "chr": "contig_1", "start": 8800, "end": 11200, "size": 2400, "genes": 4 },
+    { "id": "SV04", "type": "Duplication", "chr": "contig_5", "start": 22010, "end": 23600, "size": 1590, "genes": 2 }
+  ],
+  "synteny": {
+    "ref": ["G0001", "G0002", "G0003", "G0004", "G0005", "G0006", "G0007", "G0008"],
+    "query": ["G0001", "G0002", "G0003", "G0004", "G0005", "G0006", "G0007", "G0008"],
+    "links": [
+      [0,0],[1,1],[2,2],[3,3],[4,4],[5,5],[6,6],[7,7]
+    ]
+  },
+  "family_detail": [
+    { "family": "PF00549", "name": "Amidase", "category": "core", "count": 24, "representative": "G0001" },
+    { "family": "PF00911", "name": "ABC transporter", "category": "soft_core", "count": 22, "representative": "G0002" },
+    { "family": "PF00224", "name": "Sugar binding", "category": "shell", "count": 14, "representative": "G0003" },
+    { "family": "PF00155", "name": "Lipoprotein", "category": "cloud", "count": 3, "representative": "G0004" },
+    { "family": "PF00380", "name": "Response reg.", "category": "shell", "count": 11, "representative": "G0005" }
+  ]
+}

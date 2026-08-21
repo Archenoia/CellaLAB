@@ -1,0 +1,82 @@
+{
+  "id": "M0551",
+  "name": "HumanFeces-Healthy-042",
+  "environment": "Human feces (healthy donor)",
+  "location": "Shanghai, China",
+  "depth": 18.4,
+  "depth_unit": "Gbp",
+  "sample_date": "2026-03-14",
+  "host": "Homo sapiens",
+  "ph": 6.7,
+  "mags_count": 52,
+  "composition": [
+    { "name": "Bacteroidota", "abundance": 34 },
+    { "name": "Firmicutes", "abundance": 41 },
+    { "name": "Actinobacteriota", "abundance": 9 },
+    { "name": "Proteobacteria", "abundance": 7 },
+    { "name": "Verrucomicrobiota", "abundance": 5 },
+    { "name": "Others", "abundance": 4 }
+  ],
+  "mags_tree": {
+    "name": "Root",
+    "children": [
+      {
+        "name": "Firmicutes",
+        "children": [
+          { "name": "MAG_000211 (Faecalibacterium)", "value": 0.91 },
+          { "name": "MAG_000214 (Roseburia)", "value": 0.88 },
+          { "name": "MAG_000219 (Blautia)", "value": 0.83 }
+        ]
+      },
+      {
+        "name": "Bacteroidota",
+        "children": [
+          { "name": "MAG_000301 (Bacteroides)", "value": 0.90 },
+          { "name": "MAG_000307 (Prevotella)", "value": 0.86 }
+        ]
+      },
+      {
+        "name": "Actinobacteriota",
+        "children": [
+          { "name": "MAG_000401 (Bifidobacterium)", "value": 0.92 }
+        ]
+      },
+      {
+        "name": "Proteobacteria",
+        "children": [
+          { "name": "MAG_000502 (E. coli)", "value": 0.95 }
+        ]
+      }
+    ]
+  },
+  "genes": [
+    { "id": "G33921", "name": "butK", "product": "Butyrate kinase", "mag": "MAG_000214", "cov": 112.4 },
+    { "id": "G12844", "name": "buk", "product": "Butyrate-CoA ligase", "mag": "MAG_000219", "cov": 98.1 },
+    { "id": "G00401", "name": "amyA", "product": "Alpha-amylase", "mag": "MAG_000301", "cov": 145.0 },
+    { "id": "G02210", "name": "lacZ", "product": "Beta-galactosidase", "mag": "MAG_000211", "cov": 77.6 },
+    { "id": "G05122", "name": "fhs", "product": "Formyltetrahydrofolate synthetase", "mag": "MAG_000401", "cov": 63.2 }
+  ],
+  "pathways": [
+    { "id": "P0441", "name": "Butyrate biosynthesis (butyryl-CoA)", "genes": 4 },
+    { "id": "P0120", "name": "Starch degradation", "genes": 6 },
+    { "id": "P0330", "name": "Lactose metabolism", "genes": 3 },
+    { "id": "P0190", "name": "Folate biosynthesis", "genes": 5 }
+  ],
+  "wordcloud": [
+    { "name": "butyrate", "value": 100 },
+    { "name": "amylase", "value": 82 },
+    { "name": "lactate", "value": 64 },
+    { "name": "acetate", "value": 76 },
+    { "name": "cellulase", "value": 58 },
+    { "name": "transporter", "value": 71 },
+    { "name": "ribosomal", "value": 90 },
+    { "name": "ferredoxin", "value": 47 },
+    { "name": "kinase", "value": 55 },
+    { "name": "dehydrogenase", "value": 60 },
+    { "name": "synthase", "value": 68 },
+    { "name": "hydrolase", "value": 52 },
+    { "name": "ABC", "value": 49 },
+    { "name": "transferase", "value": 44 },
+    { "name": "reductase", "value": 41 }
+  ]
+}

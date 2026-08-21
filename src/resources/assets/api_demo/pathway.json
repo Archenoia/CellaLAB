@@ -1,0 +1,59 @@
+{
+  "id": "P0441",
+  "name": "Butyrate biosynthesis (butyryl-CoA pathway)",
+  "description": "The butyryl-CoA pathway is the predominant route for butyrate production in Firmicutes. Acetyl-CoA is condensed and reduced through acetoacetyl-CoA, 3-hydroxybutyryl-CoA, crotonyl-CoA and butyryl-CoA, finally yielding butyrate via butyrate kinase or phosphate butyryltransferase / butyrate kinase (Buk). It operates in cross-feeding with acetate producers that supply acetyl-CoA precursors.",
+  "reaction_count": 6,
+  "metabolites": [
+    { "id": "M001", "name": "Acetyl-CoA", "role": "Substrate" },
+    { "id": "M002", "name": "Acetoacetyl-CoA", "role": "Intermediate" },
+    { "id": "M003", "name": "3-Hydroxybutyryl-CoA", "role": "Intermediate" },
+    { "id": "M004", "name": "Crotonyl-CoA", "role": "Intermediate" },
+    { "id": "M005", "name": "Butyryl-CoA", "role": "Intermediate" },
+    { "id": "M006", "name": "Butyrate", "role": "Product" }
+  ],
+  "reactions": [
+    { "id": "R1", "name": "Acetyl-CoA condensation", "enzyme": "EC 2.3.1.9", "from": "Acetyl-CoA", "to": "Acetoacetyl-CoA" },
+    { "id": "R2", "name": "Reduction", "enzyme": "EC 1.1.1.36", "from": "Acetoacetyl-CoA", "to": "3-Hydroxybutyryl-CoA" },
+    { "id": "R3", "name": "Dehydration", "enzyme": "EC 4.2.1.55", "from": "3-Hydroxybutyryl-CoA", "to": "Crotonyl-CoA" },
+    { "id": "R4", "name": "Reduction", "enzyme": "EC 1.3.1.38", "from": "Crotonyl-CoA", "to": "Butyryl-CoA" },
+    { "id": "R5", "name": "Phosphotransfer", "enzyme": "EC 2.3.1.19", "from": "Butyryl-CoA", "to": "Butyryl-phosphate" },
+    { "id": "R6", "name": "Butyrate formation", "enzyme": "EC 2.7.2.7", "from": "Butyryl-phosphate", "to": "Butyrate" }
+  ],
+  "genes": [
+    { "id": "G33921", "name": "butK", "product": "Butyrate kinase", "organism": "Roseburia intestinalis" },
+    { "id": "G12844", "name": "buk", "product": "Butyrate-CoA ligase", "organism": "Anaerostipes caccae" },
+    { "id": "G00440", "name": "atoB", "product": "Acetyl-CoA acetyltransferase", "organism": "Faecalibacterium prausnitzii" },
+    { "id": "G00881", "name": "crt", "product": "Crotonyl-CoA reductase", "organism": "Eubacterium rectale" }
+  ],
+  "network": {
+    "nodes": [
+      { "id": "Acetyl-CoA", "cat": "metabolite", "label": "Acetyl-CoA" },
+      { "id": "Acetoacetyl-CoA", "cat": "metabolite", "label": "Acetoacetyl-CoA" },
+      { "id": "3-Hydroxybutyryl-CoA", "cat": "metabolite", "label": "3-Hydroxybutyryl-CoA" },
+      { "id": "Crotonyl-CoA", "cat": "metabolite", "label": "Crotonyl-CoA" },
+      { "id": "Butyryl-CoA", "cat": "metabolite", "label": "Butyryl-CoA" },
+      { "id": "Butyrate", "cat": "product", "label": "Butyrate" }
+    ],
+    "links": [
+      { "source": "Acetyl-CoA", "target": "Acetoacetyl-CoA" },
+      { "source": "Acetoacetyl-CoA", "target": "3-Hydroxybutyryl-CoA" },
+      { "source": "3-Hydroxybutyryl-CoA", "target": "Crotonyl-CoA" },
+      { "source": "Crotonyl-CoA", "target": "Butyryl-CoA" },
+      { "source": "Butyryl-CoA", "target": "Butyrate" }
+    ]
+  },
+  "upstream": [
+    { "id": "P0190", "name": "Pyruvate fermentation", "relation": "supplies Acetyl-CoA" }
+  ],
+  "downstream": [
+    { "id": "P0600", "name": "Butyrate -> epithelial butyrate utilization", "relation": "substrate" }
+  ],
+  "related_consortia": [
+    { "id": "C0123", "name": "ButyraCult-5" },
+    { "id": "C0088", "name": "GutSim-12" }
+  ],
+  "related_metagenomes": [
+    { "id": "M0551", "name": "HumanFeces-Healthy-042" },
+    { "id": "M0602", "name": "RuminantGut-A" }
+  ]
+}

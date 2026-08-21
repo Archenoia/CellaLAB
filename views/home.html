@@ -1,0 +1,43 @@
+${./includes/head.html}
+<body class="index-page">
+
+${./includes/nav.html}
+
+<main class="cl-main">
+  <div class="container">
+
+    <!-- Hero -->
+    <section class="cl-hero">
+      <h1 id="hero-title">Cella LAB</h1>
+      <p class="cl-hero-sub" id="hero-tagline"></p>
+      <p class="cl-muted" id="hero-intro" style="max-width:760px;margin-top:14px;"></p>
+      <span class="cl-hero-tag" id="hero-tag">Synthetic Microbial Consortium Database</span>
+    </section>
+
+    <!-- Stats -->
+    <section class="cl-section">
+      <div class="cl-section-title">Database at a Glance</div>
+      <div class="row g-3" id="stat-row"></div>
+    </section>
+
+    <!-- Modules -->
+    <section class="cl-section">
+      <div class="cl-section-title">Core Modules</div>
+      <div class="row g-3" id="module-row"></div>
+    </section>
+
+    <!-- Latest -->
+    <section class="cl-section">
+      <div class="cl-section-title">Recently Curated</div>
+      <div class="row g-3" id="latest-row"></div>
+    </section>
+
+  </div>
+</main>
+
+${./includes/footer.html}
+
+<script src="/resources/javascript/charts.js"></script>
+<script src="/resources/javascript/home.js"></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+${./includes/head.html}
+<body class="index-page">
+
+${./includes/nav.html}
+
+<main class="cl-main">
+  <div class="container">
+
+    <section class="cl-section" style="padding-top:30px;">
+      <div class="text-center mb-4">
+        <h1 style="color:var(--cl-primary);">Search Cella LAB</h1>
+        <p class="cl-muted">Query synthetic consortia, metagenomes, genes, enzymes and pathways in one place.</p>
+      </div>
+
+      <div class="cl-search">
+        <input type="text" id="search-input" placeholder="Enter a keyword, gene name, taxon or pathway…" autocomplete="off">
+        <button class="cl-search-btn" id="search-go" title="Search"><i class="bi bi-search"></i></button>
+        <div class="cl-suggest" id="search-suggest"></div>
+      </div>
+
+      <div class="cl-hot" id="hot-tags"></div>
+    </section>
+
+    <!-- Category entries -->
+    <section class="cl-section">
+      <div class="cl-section-title">Browse by Category</div>
+      <div class="row g-3" id="cat-row"></div>
+    </section>
+
+  </div>
+</main>
+
+${./includes/footer.html}
+
+<script src="/resources/javascript/charts.js"></script>
+<script src="/resources/javascript/search.js"></script>
+</body>
+</html>
