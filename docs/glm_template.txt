@@ -7,7 +7,7 @@
 
 目前我想要通过这个数据库向使用者提供合成菌群的设计理论支撑
 
-目前我已经在views文件夹中编写了一些前端页面模板，但是这些页面模板还需要进一步完善，以便于我可以直接启动一个简单的http静态文件服务器直接查看这个前端模板的渲染结果。
+目前我已经在views文件夹中编写了一些前端页面模板，但是这些页面模板还需要进一步完善，以便于我可以直接启动一个php服务器直接查看这个前端模板的渲染结果。
 在views文件夹中的html模板中，主要是通过将在不同页面之间公用的html内容划分为不同的模块组件，放在了views\includes文件夹中，然后再html视图页面文件中就可以通过${./includes/xxxxx.html}的方式进行按照相对路径引用。由于http服务器是配置src作为wwwroot根目录，所以html模板中针对javascript之类的资源文件的引用是针对src\resources内的文件的引用
 
 目前我想要你基于我的数据库描述，在我的html模板的基础上，为我开发出一套基于html+javascript的前端模板。你所编写的前端模板应该是包含有至少下列页面信息的：
@@ -22,7 +22,6 @@
 9. 基因数据展示页面：基因名，所属基因家族，关联到的菌株，关联到的宏基因组样本以及合成菌群，代表性基因序列，蛋白质结构组成信息（主要为PFAM结构域），所处的通路
 
 所编写的前端页面模板应该采用html+javascript+json的形式展示，其中通过json存储示例的来自后台需要渲染到页面的api响应结果数据，方便我编写后台api代码。
-所编写的前端页面模板应该采用html+javascript+json的形式展示，方便我可以直接启动一个简单的http静态文件服务器直接查看这个前端模板的渲染结果
 
 将javascript脚本代码放入src\resources\javascript文件夹，页面css样式放入到src\resources\styles文件夹，第三方代码库放入到src\resources\vendor文件夹，svg图片资源放入到src\resources\images文件夹。用于模拟api响应的json数据文件放置在src\resources\assets\api_demo文件夹中。
 
