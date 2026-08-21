@@ -1,0 +1,61 @@
+${./includes/head.html}
+<body class="index-page">
+
+${./includes/nav.html}
+
+<main class="cl-main">
+  <div class="container">
+
+    <div class="cl-breadcrumb">
+      <a href="/">Home</a> / <a href="/gene">Genes</a> / Detail
+    </div>
+
+    <div class="cl-detail-head" id="g-head">
+      <h1 id="g-name">—</h1>
+      <div class="cl-meta" id="g-meta"></div>
+      <p class="cl-muted mt-3" id="g-func"></p>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="cl-section-title">Representative Sequence</div>
+        <div class="cl-seq" id="g-seq"></div>
+      </div>
+      <div class="col-lg-6">
+        <div class="cl-section-title">PFAM Domain Architecture</div>
+        <div class="cl-card" id="g-pfam-card">
+          <div class="cl-pfam" id="g-pfam"></div>
+          <div class="cl-muted mt-3" style="font-size:12px;">Sequence positions are illustrative (relative to representative sequence length).</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="cl-section-title">Associated Strains</div>
+        <div id="g-strains"></div>
+      </div>
+      <div class="col-lg-4">
+        <div class="cl-section-title">Metagenome Samples</div>
+        <div id="g-mags"></div>
+      </div>
+      <div class="col-lg-4">
+        <div class="cl-section-title">Consortia</div>
+        <div id="g-cons"></div>
+      </div>
+    </div>
+
+    <div class="cl-section">
+      <div class="cl-section-title">Pathways</div>
+      <div id="g-pathways"></div>
+    </div>
+
+  </div>
+</main>
+
+${./includes/footer.html}
+
+<script src="/resources/javascript/charts.js"></script>
+<script src="/resources/javascript/gene.js"></script>
+</body>
+</html>

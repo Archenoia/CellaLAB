@@ -1,0 +1,45 @@
+${./includes/head.html}
+<body class="index-page">
+
+${./includes/nav.html}
+
+<main class="cl-main">
+  <div class="container">
+
+    <div class="cl-breadcrumb">
+      <a href="/">Home</a> / <a href="/search">Search</a> / Results
+    </div>
+
+    <div class="cl-detail-head">
+      <h1>Search Results</h1>
+      <div class="cl-meta">
+        <span>Query: <b id="q-label">—</b></span>
+        <span>Total: <b id="total-label">0</b> matches</span>
+      </div>
+    </div>
+
+    <div class="row">
+      <!-- Filter sidebar -->
+      <div class="col-lg-3">
+        <div class="cl-filter" id="filter-box">
+          <h5>Filter by Category</h5>
+          <div id="filter-list"></div>
+          <button class="btn btn-sm mt-3 w-100" style="border:1px solid var(--cl-border-strong);background:var(--cl-bg-alt);color:var(--cl-text);" id="filter-all">Show all</button>
+        </div>
+      </div>
+
+      <!-- Results -->
+      <div class="col-lg-9">
+        <div id="result-area"></div>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+${./includes/footer.html}
+
+<script src="/resources/javascript/charts.js"></script>
+<script src="/resources/javascript/search-result.js"></script>
+</body>
+</html>

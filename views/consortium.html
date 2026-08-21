@@ -1,0 +1,54 @@
+${./includes/head.html}
+<body class="index-page">
+
+${./includes/nav.html}
+
+<main class="cl-main">
+  <div class="container">
+
+    <div class="cl-breadcrumb">
+      <a href="/">Home</a> / <a href="/consortium">Synthetic Consortia</a> / Detail
+    </div>
+
+    <div class="cl-detail-head" id="cons-head">
+      <h1 id="c-name">—</h1>
+      <div class="cl-meta" id="c-meta"></div>
+      <p class="cl-muted mt-3" id="c-desc"></p>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="cl-section-title">Community Composition</div>
+        <div class="cl-chart" id="c-comp"></div>
+      </div>
+      <div class="col-lg-6">
+        <div class="cl-section-title">Strain Metabolic UMAP (3D)</div>
+        <div class="cl-chart" id="c-umap"></div>
+      </div>
+    </div>
+
+    <div class="cl-section">
+      <div class="cl-section-title">Cross-feeding Network</div>
+      <div class="cl-chart cl-chart-lg" id="c-net"></div>
+      <div class="cl-legend" id="c-legend"></div>
+    </div>
+
+    <div class="cl-section">
+      <div class="cl-section-title">Member Strains</div>
+      <div class="cl-table-wrap">
+        <table class="cl-table">
+          <thead><tr><th>Strain</th><th>Abundance (%)</th><th>Role</th></tr></thead>
+          <tbody id="c-strains"></tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+${./includes/footer.html}
+
+<script src="/resources/javascript/charts.js"></script>
+<script src="/resources/javascript/consortium.js"></script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+${./includes/head.html}
+<body class="index-page">
+
+${./includes/nav.html}
+
+<main class="cl-main">
+  <div class="container">
+
+    <div class="cl-breadcrumb">
+      <a href="/">Home</a> / <a href="/metagenome">Metagenome Samples</a> / Detail
+    </div>
+
+    <div class="cl-detail-head" id="m-head">
+      <h1 id="m-name">—</h1>
+      <div class="cl-meta" id="m-meta"></div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="cl-section-title">Community Composition</div>
+        <div class="cl-chart" id="m-comp"></div>
+      </div>
+      <div class="col-lg-6">
+        <div class="cl-section-title">MAGs Clustering (Hierarchical)</div>
+        <div class="cl-chart" id="m-tree"></div>
+      </div>
+    </div>
+
+    <div class="cl-section">
+      <div class="cl-section-title">Gene Theme Word Cloud</div>
+      <div class="cl-chart" id="m-word"></div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-7">
+        <div class="cl-section-title">Annotated Genes</div>
+        <div class="cl-table-wrap">
+          <table class="cl-table">
+            <thead><tr><th>Gene</th><th>Product</th><th>MAG</th><th>Cov (×)</th></tr></thead>
+            <tbody id="m-genes"></tbody>
+          </table>
+        </div>
+      </div>
+      <div class="col-lg-5">
+        <div class="cl-section-title">Associated Pathways</div>
+        <div id="m-pathways"></div>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+${./includes/footer.html}
+
+<script src="/resources/javascript/charts.js"></script>
+<script src="/resources/javascript/metagenome.js"></script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+${./includes/head.html}
+<body class="index-page">
+
+${./includes/nav.html}
+
+<main class="cl-main">
+  <div class="container">
+
+    <div class="cl-breadcrumb">
+      <a href="/">Home</a> / <a href="/pangenome">Pangenome Analysis</a> / Detail
+    </div>
+
+    <div class="cl-detail-head" id="p-head">
+      <h1 id="p-name">—</h1>
+      <div class="cl-meta" id="p-meta"></div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="cl-section-title">Gene Family Composition</div>
+        <div class="cl-chart" id="p-pie"></div>
+      </div>
+      <div class="col-lg-6">
+        <div class="cl-section-title">Pangenome & Core-genome Curve</div>
+        <div class="cl-chart" id="p-curve"></div>
+      </div>
+    </div>
+
+    <div class="cl-section">
+      <div class="cl-section-title">PAV Matrix (Presence / Absence)</div>
+      <div class="cl-chart cl-chart-lg" id="p-pav"></div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="cl-section-title">Structural Variations</div>
+        <div class="cl-table-wrap">
+          <table class="cl-table">
+            <thead><tr><th>SV</th><th>Type</th><th>Location</th><th>Size (bp)</th><th>Genes</th></tr></thead>
+            <tbody id="p-sv"></tbody>
+          </table>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="cl-section-title">Synteny (Reference vs Query)</div>
+        <div class="cl-chart cl-chart-sm" id="p-synteny"></div>
+      </div>
+    </div>
+
+    <div class="cl-section">
+      <div class="cl-section-title">Gene Family Details</div>
+      <div class="cl-table-wrap">
+        <table class="cl-table">
+          <thead><tr><th>Family</th><th>Name</th><th>Category</th><th>Genomes</th><th>Representative</th></tr></thead>
+          <tbody id="p-fam"></tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+${./includes/footer.html}
+
+<script src="/resources/javascript/charts.js"></script>
+<script src="/resources/javascript/pangenome.js"></script>
+</body>
+</html>
