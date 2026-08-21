@@ -1,0 +1,46 @@
+{
+  "db_name": "Cella LAB",
+  "db_full_name": "Cella LAB — Synthetic Microbial Consortium Database",
+  "tagline": "A curated knowledge base supporting the rational design of synthetic microbial consortia.",
+  "intro": "Cella LAB integrates published and industrially documented synthetic consortia, metagenome-assembled genomes (MAGs), pangenome analyses, and metabolic pathways into a single, queryable resource. It provides evidence-based theoretical support for the bottom-up design of microbial communities with defined functions.",
+  "stats": [
+    { "label": "Synthetic Consortia", "num": 186, "unit": "" },
+    { "label": "Metagenome Samples", "num": 942, "unit": "" },
+    { "label": "MAGs", "num": 5120, "unit": "" },
+    { "label": "Genes Annotated", "num": 128400, "unit": "" },
+    { "label": "Pangenome Families", "num": 31450, "unit": "" },
+    { "label": "Metabolic Pathways", "num": 1187, "unit": "" }
+  ],
+  "modules": [
+    {
+      "key": "consortium",
+      "title": "Synthetic Consortia",
+      "icon": "bi-collection",
+      "desc": "Functionally defined communities collected from literature and commercial products, with strain composition, cross-feeding networks and functional descriptions."
+    },
+    {
+      "key": "metagenome",
+      "title": "Metagenome Samples",
+      "icon": "bi-globe",
+      "desc": "Microbial community profiling from feces, wastewater, soil, lake water and other environments, with MAGs, gene annotations and sample metadata."
+    },
+    {
+      "key": "pangenome",
+      "title": "Pangenome Analysis",
+      "icon": "bi-diagram-3",
+      "desc": "Pangenome comparison across consortia and environments: core/soft-core/shell/cloud gene families, PAV matrices, SV and synteny analysis."
+    },
+    {
+      "key": "pathway",
+      "title": "Metabolic Pathways",
+      "icon": "bi-share",
+      "desc": "Pathway maps explaining the functional origin and molecular mechanisms of consortium phenotypes, with genes, metabolites and reactions."
+    }
+  ],
+  "latest": [
+    { "type": "consortium", "name": "EcoCult-7", "desc": "7-strain consortium for lignocellulose degradation", "date": "2026-08-12" },
+    { "type": "metagenome", "name": "LakeTaihu-2026-Summer", "desc": "Eutrophic lake water sampling, 38 MAGs", "date": "2026-08-09" },
+    { "type": "pathway", "name": "Butyrate Biosynthesis (Rutarate pathway)", "desc": "Newly mapped cross-strain pathway", "date": "2026-08-03" },
+    { "type": "pangenome", "name": "Lactobacillus plantarum clade", "desc": "Pangenome of 24 isolates", "date": "2026-07-28" }
+  ]
+}

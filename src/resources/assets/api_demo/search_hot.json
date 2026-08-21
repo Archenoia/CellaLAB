@@ -1,0 +1,24 @@
+{
+  "hot_searches": [
+    { "term": "butyrate production", "cat": "pathway" },
+    { "term": "lignocellulose degradation", "cat": "consortium" },
+    { "term": "E. coli", "cat": "species" },
+    { "term": "gut microbiome", "cat": "metagenome" },
+    { "term": "SCFA synthesis", "cat": "pathway" },
+    { "term": "nitrogen fixation", "cat": "consortium" },
+    { "term": "MAG_000128", "cat": "gene" },
+    { "term": "lakeside sediment", "cat": "metagenome" },
+    { "term": "alpha-amylase", "cat": "enzyme" },
+    { "term": "pangenome core genes", "cat": "pangenome" },
+    { "term": "cross-feeding", "cat": "consortium" },
+    { "term": "hydrogen production", "cat": "consortium" }
+  ],
+  "categories": [
+    { "key": "consortium", "label": "Synthetic Consortia" },
+    { "key": "species", "label": "Species / Taxonomy" },
+    { "key": "gene", "label": "Genes" },
+    { "key": "metagenome", "label": "Environment Samples" },
+    { "key": "enzyme", "label": "Enzymes" },
+    { "key": "pathway", "label": "Pathways" }
+  ]
+}
