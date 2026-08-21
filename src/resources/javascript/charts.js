@@ -5,11 +5,11 @@
 (function (global) {
   "use strict";
 
-  // Low-saturation academic color palette
+  // Low-saturation academic blue-green palette (matches main.css theme)
   var PALETTE = [
-    "#1F4E79", "#2E7D5B", "#C77D3A", "#8E44AD",
-    "#B8860B", "#5B8C5A", "#4A7BA6", "#A0524D",
-    "#6B8E9E", "#9C7CAB", "#C2A35A", "#7A8B6F"
+    "#1F4E79", "#1F6F5C", "#2E7D5B", "#C77D3A", "#8E44AD",
+    "#B8860B", "#4A7BA6", "#5B8C5A", "#A0524D", "#6B8E9E",
+    "#9C7CAB", "#C2A35A", "#7A8B6F", "#3A7CA5"
   ];
 
   var charts = [];
@@ -164,7 +164,7 @@
       yAxis: Object.assign({ type: "category", data: yData, splitArea: { show: true } }, axisStyle(), { axisLabel: { color: "#5A5A5A", fontSize: 11 } }),
       visualMap: {
         min: 0, max: 1, calculable: false, show: false,
-        inRange: { color: ["#F0EDE4", "#1F4E79"] }
+        inRange: { color: ["#F0EDE4", "#1F6F5C"] }
       },
       series: [{
         type: "heatmap",
