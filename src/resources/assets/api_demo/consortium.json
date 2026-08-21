@@ -1,0 +1,58 @@
+{
+  "id": "C0123",
+  "name": "ButyraCult-5",
+  "function": "Butyrate production from dietary fiber",
+  "description": "ButyraCult-5 is a 5-strain synthetic consortium designed to convert complex plant polysaccharides into butyrate. It combines primary degraders (cellulose/hemicellulose hydrolysis), intermediate fermenters (acetate/ lactate producers) and terminal butyrogens that channel reducing equivalents into butyryl-CoA. Cross-feeding of acetate and lactate between members stabilizes butyrate yields under pH fluctuation.",
+  "source": "Published (Nature Microbiology, 2024)",
+  "strains": 5,
+  "environment": "Simulated colon (pH 6.0-6.8)",
+  "composition": [
+    { "name": "Bacteroides cellulosilyticus", "abundance": 26, "role": "Primary degrader" },
+    { "name": "Roseburia intestinalis", "abundance": 22, "role": "Butyrogen" },
+    { "name": "Faecalibacterium prausnitzii", "abundance": 20, "role": "Butyrogen" },
+    { "name": "Anaerostipes caccae", "abundance": 18, "role": "Lactate->butyrate" },
+    { "name": "Blautia producta", "abundance": 14, "role": "Acetogen / shuttle" }
+  ],
+  "umap": [
+    { "name": "Bacteroides cellulosilyticus", "x": -1.2, "y": 2.1, "z": 0.8, "cat": "Degrader" },
+    { "name": "Roseburia intestinalis", "x": 1.5, "y": -0.9, "z": 1.4, "cat": "Butyrogen" },
+    { "name": "Faecalibacterium prausnitzii", "x": 2.1, "y": 1.0, "z": -0.6, "cat": "Butyrogen" },
+    { "name": "Anaerostipes caccae", "x": -0.4, "y": -1.8, "z": 0.3, "cat": "Converter" },
+    { "name": "Blautia producta", "x": 0.6, "y": 0.4, "z": -1.5, "cat": "Shuttle" }
+  ],
+  "network": {
+    "nodes": [
+      { "id": "B. cellulosilyticus", "cat": "strain", "label": "B. cellulosilyticus" },
+      { "id": "R. intestinalis", "cat": "strain", "label": "R. intestinalis" },
+      { "id": "F. prausnitzii", "cat": "strain", "label": "F. prausnitzii" },
+      { "id": "A. caccae", "cat": "strain", "label": "A. caccae" },
+      { "id": "B. producta", "cat": "strain", "label": "B. producta" },
+      { "id": "acetate", "cat": "metabolite", "label": "acetate" },
+      { "id": "lactate", "cat": "metabolite", "label": "lactate" },
+      { "id": "butyrate", "cat": "metabolite", "label": "butyrate" },
+      { "id": "cellulose", "cat": "metabolite", "label": "cellulose" }
+    ],
+    "links": [
+      { "source": "B. cellulosilyticus", "target": "cellulose", "relation": "produce" },
+      { "source": "B. cellulosilyticus", "target": "acetate", "relation": "produce" },
+      { "source": "R. intestinalis", "target": "acetate", "relation": "compete" },
+      { "source": "R. intestinalis", "target": "butyrate", "relation": "produce" },
+      { "source": "F. prausnitzii", "target": "butyrate", "relation": "produce" },
+      { "source": "A. caccae", "target": "lactate", "relation": "consume" },
+      { "source": "A. caccae", "target": "butyrate", "relation": "produce" },
+      { "source": "B. producta", "target": "acetate", "relation": "consume" },
+      { "source": "B. producta", "target": "R. intestinalis", "relation": "antagonism" },
+      { "source": "R. intestinalis", "target": "F. prausnitzii", "relation": "complement" },
+      { "source": "cellulose", "target": "B. cellulosilyticus", "relation": "consume" },
+      { "source": "lactate", "target": "A. caccae", "relation": "crossfeed" },
+      { "source": "acetate", "target": "R. intestinalis", "relation": "crossfeed" },
+      { "source": "acetate", "target": "F. prausnitzii", "relation": "crossfeed" }
+    ]
+  },
+  "relation_legend": [
+    { "key": "antagonism", "label": "Antagonism", "color": "#C0392B" },
+    { "key": "complement", "label": "Nutrient complement", "color": "#2E7D5B" },
+    { "key": "compete", "label": "Nutrient competition", "color": "#B8860B" },
+    { "key": "crossfeed", "label": "Cross-feeding / biosynthesis", "color": "#1F4E79" }
+  ]
+}

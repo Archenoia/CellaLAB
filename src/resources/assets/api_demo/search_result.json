@@ -1,0 +1,44 @@
+{
+  "query": "butyrate",
+  "total": 73,
+  "counts": {
+    "consortium": 9,
+    "species": 14,
+    "gene": 21,
+    "metagenome": 11,
+    "enzyme": 8,
+    "pathway": 10
+  },
+  "results": {
+    "consortium": [
+      { "id": "C0123", "name": "ButyraCult-5", "desc": "5-strain consortium producing butyrate from dietary fiber", "meta": "Function: SCFA production" },
+      { "id": "C0088", "name": "GutSim-12", "desc": "12-strain synthetic gut community with butyrogenic subset", "meta": "Function: Colonization resistance" },
+      { "id": "C0190", "name": "EcoFerm-3", "desc": "3-strain fermenter community for butyrate-rich silage", "meta": "Function: Fermentation" }
+    ],
+    "species": [
+      { "id": "T0042", "name": "Faecalibacterium prausnitzii", "desc": "Butyrate-producing commensal, Phylum Firmicutes", "meta": "Phylum: Firmicutes" },
+      { "id": "T0101", "name": "Eubacterium rectale", "desc": "Major butyrate producer in human gut", "meta": "Phylum: Firmicutes" },
+      { "id": "T0277", "name": "Roseburia intestinalis", "desc": "Butyrate-producing symbiont", "meta": "Phylum: Firmicutes" }
+    ],
+    "gene": [
+      { "id": "G33921", "name": "butK", "desc": "Butyrate kinase, catalyzes butyryl-phosphate to butyrate", "meta": "Family: butyrate_kinase" },
+      { "id": "G12844", "name": "buk", "desc": "Butyrate-CoA ligase / butyrate kinase", "meta": "Family: AMP-binding" },
+      { "id": "G40210", "name": "4hbt", "desc": "4-hydroxybutyryl-CoA dehydratase", "meta": "Family: hydratase" }
+    ],
+    "metagenome": [
+      { "id": "M0551", "name": "HumanFeces-Healthy-042", "desc": "Healthy donor stool, 52 MAGs, high butyrate potential", "meta": "Env: Feces" },
+      { "id": "M0602", "name": "RuminantGut-A", "desc": "Bovine rumen sample, 61 MAGs", "meta": "Env: Rumen" },
+      { "id": "M0488", "name": "Bioreactor-Butyrate", "desc": "Continuous culture enriched for butyrogens", "meta": "Env: Bioreactor" }
+    ],
+    "enzyme": [
+      { "id": "E0098", "name": "Butyrate kinase (EC 2.7.2.7)", "desc": "ATP-dependent conversion of butyryl-phosphate to butyrate", "meta": "EC: 2.7.2.7" },
+      { "id": "E0112", "name": "Acetyl-CoA acetyltransferase (EC 2.3.1.9)", "desc": "Thiolase in butyrate pathway", "meta": "EC: 2.3.1.9" },
+      { "id": "E0140", "name": "Phosphate butyryltransferase (EC 2.3.1.19)", "desc": "Butyryl-phosphate formation", "meta": "EC: 2.3.1.19" }
+    ],
+    "pathway": [
+      { "id": "P0441", "name": "Butyrate biosynthesis (butyryl-CoA pathway)", "desc": "Central butyrate route in Firmicutes", "meta": "Reactions: 6" },
+      { "id": "P0450", "name": "Butyrate biosynthesis (Rutarate pathway)", "desc": "Alternative 4-hydroxybutyrate route", "meta": "Reactions: 5" },
+      { "id": "P0461", "name": "Acetate/Butyrate co-fermentation", "desc": "Cross-strain carbon sharing", "meta": "Reactions: 8" }
+    ]
+  }
+}
